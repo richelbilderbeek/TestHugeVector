@@ -6,7 +6,7 @@
 #include "qthideandshowdialog.h"
 
 namespace Ui {
-  class Dialog;
+  class QtTestHugeVectorMainDialog;
 }
 
 namespace ribi {
@@ -17,10 +17,12 @@ class QtTestHugeVectorMainDialog : public QtHideAndShowDialog
 
 public:
     explicit QtTestHugeVectorMainDialog(QWidget *parent = 0);
+    QtTestHugeVectorMainDialog(const QtTestHugeVectorMainDialog&) = delete;
+    QtTestHugeVectorMainDialog& operator=(const QtTestHugeVectorMainDialog&) = delete;
     ~QtTestHugeVectorMainDialog();
 
 private:
-    Ui::Dialog *ui;
+    Ui::QtTestHugeVectorMainDialog *ui;
 };
 
 } //~namespace ribi
